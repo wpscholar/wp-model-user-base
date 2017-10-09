@@ -23,4 +23,15 @@ abstract class UserModelBase {
 		$this->user = $user;
 	}
 
+	/**
+	 * Create a new instance
+	 *
+	 * @param \WP_User $user
+	 *
+	 * @return static
+	 */
+	public static function create( \WP_User $user ) {
+		return new static( $user );
+	}
+
 }
